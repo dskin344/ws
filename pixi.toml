@@ -20,7 +20,7 @@ scripts = [".pixi.sh"]
 
 [tasks]
 rqt = { cmd = "ros2 run rqt_image_view rqt_image_view" }
-build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build --symlink-install", inputs = ["src"]}
+build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build", inputs = ["src"]}
 turtle = {cmd =  "ros2 run turtlesim turtlesim_node", inputs = ["src"]}
 
 init = "bash -c 'mkdir -p $PIXI_PROJECT_ROOT/src'"
