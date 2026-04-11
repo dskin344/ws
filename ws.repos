@@ -23,10 +23,6 @@ repositories:
     type: git
     url: https://github.com/ros-drivers/joystick_drivers
     version: ros2
-  kalibr:
-    type: git
-    url: https://github.com/ethz-asl/kalibr
-    version: master
   launch_param_builder:
     type: git
     url: https://github.com/PickNikRobotics/launch_param_builder
