@@ -2,7 +2,7 @@ repositories:
   apriltag_ros:
     type: git
     url: https://github.com/christianrauch/apriltag_ros
-    version: master
+    version: 3.1.0
   easy_handeye2:
     type: git
     url: https://github.com/mhyatt000/easy_handeye2
@@ -15,10 +15,6 @@ repositories:
     type: git
     url: https://github.com/ros/eigen_stl_containers
     version: ros2
-  franka_spacemouse:
-    type: git
-    url: https://github.com/frankarobotics/franka_spacemouse
-    version: main
   joystick_drivers:
     type: git
     url: https://github.com/ros-drivers/joystick_drivers

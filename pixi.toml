@@ -20,7 +20,7 @@ scripts = [".pixi.sh"]
 
 [tasks]
 rqt = { cmd = "ros2 run rqt_image_view rqt_image_view" }
-build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build", inputs = ["src"]}
+build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build --cmake-args -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_MODULE_LINKER_FLAGS=-L$CONDA_PREFIX/lib", inputs = ["src"]}
 turtle = {cmd =  "ros2 run turtlesim turtlesim_node", inputs = ["src"]}
 
 init = "bash -c 'mkdir -p $PIXI_PROJECT_ROOT/src'"
@@ -103,6 +103,7 @@ opencv-python = "*"
 [dependencies]
 python = ">=3.11,<3.12"
 pip = "*"
+setuptools = "<60"
 
 # Core ROS
 ros-humble-desktop = ">=0.10.0,<0.11"   # includes rviz2, tf2, rosbag2, etc.
@@ -120,6 +121,7 @@ ros-humble-xacro = "*"
 ros-humble-moveit-msgs = "*"            # xArm packages depend on this, even without MoveIt
 ros-humble-moveit = "*"
 ros-humble-apriltag-msgs = "*"          # only if your workspace references them
+apriltag = ">=3.2"
 ros-humble-gazebo-ros-pkgs = "*"
 gazebo = "*"
 
@@ -137,4 +139,7 @@ flax = ">=0.10.4,<0.11"
 ros-humble-moveit-servo = ">=2.5.7,<3"
 ros-humble-rosbag2-storage-mcap = ">=0.15.13,<0.16"
 ros-humble-diagnostic-updater = "*"
+ros-humble-generate-parameter-library = "*"
+ros-humble-ros-testing = "*"
 librealsense = "*"
+poco = "*"
