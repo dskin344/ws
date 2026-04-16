@@ -66,7 +66,7 @@ depends-on = [ "build_xnodes", "setup", ]
 
 
 [tasks.build_xnodes]
-cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && COLCON_LOG_PATH=/tmp/colcon_log colcon build --packages-select xnodes'"
+cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && colcon build --packages-select xnodes'"
 
 [tasks.init_xarm]
 cmd = "git submodule update --init --recursive && git pull --recurse-submodules"
