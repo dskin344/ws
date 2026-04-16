@@ -39,6 +39,10 @@ repositories:
     type: git
     url: https://github.com/xArm-Developer/xarm_ros2.git
     version: humble
+  realsense-ros:
+    type: git
+    url: https://github.com/IntelRealSense/realsense-ros.git
+    version: 4.55.1
   xnodes:
     type: git
     url: https://github.com/mhyatt000/xnodes

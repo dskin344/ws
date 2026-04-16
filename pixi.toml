@@ -37,7 +37,7 @@ performance = {cmd = "bash -lc 'echo performance | sudo tee /sys/devices/system/
 xmove = {cmd = "ros2 launch xarm_moveit_config xarm6_moveit_fake.launch.py", inputs = ["src"]}
 xservo = {cmd = "ros2 launch xarm_moveit_servo xarm_moveit_servo_realmove.launch.py dof:=7 robot_ip:=192.168.1.231 add_gripper:=true report_type:=dev"}
 xservo-fake = {cmd = "ros2 launch xarm_moveit_servo xarm_moveit_servo_fake.launch.py dof:=7 add_gripper:=true", inputs = ["src"]}
-build_rs = { cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && colcon build --packages-select realsense2_camera_msgs realsense2_camera realsense2_description --cmake-args -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib'" }
+build_rs = { cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && colcon build --packages-select realsense2_camera_msgs realsense2_camera realsense2_description --cmake-args -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib'" }
 rs = { cmd = "ros2 launch realsense2_camera rs_launch.py" }
 realsense = { cmd = "ros2 launch realsense2_camera rs_launch.py" }
 
