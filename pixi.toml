@@ -83,7 +83,7 @@ cmd = "bash -lc 'colcon build --base-paths $PIXI_PROJECT_ROOT/src/xarm_ros2 --cm
 # ==========
 
 [pypi-dependencies]
-evdev = ">=1.7.0,<1.9"
+evdev = "*"
 tyro = "*"
 rich = "*"
 vcstool = "*"
